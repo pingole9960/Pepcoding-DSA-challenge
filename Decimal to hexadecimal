@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Stack<Integer>st=new Stack<>();  
+		String s="";
+		int n=439;
+		while(n>0){
+			int r=n%16;
+			st.push(r);
+			n=n/16;
+		}
+		for(int i=st.size()-1;i>=0;i--){
+			if(st.get(i)==14)
+				s+='E';
+			else if(st.get(i)==15)
+				s+='F';
+			else if(st.get(i)==13)
+				s+='D';	
+			else if(st.get(i)==12)
+				s+='C';
+			else if(st.get(i)==11)
+				s+='B';
+			else if(st.get(i)==10)
+				s+='A';
+			else
+			     s+=st.get(i);
+			     
+			}
+			System.out.print(s);
+		
+			
+	}
+}
